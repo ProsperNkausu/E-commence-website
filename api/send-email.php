@@ -34,8 +34,8 @@ function sendInvoiceEmail($to, $invoiceUrl, $invoiceNumber, $filePath)
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'deepscale.info@gmail.com';
-        $mail->Password   = 'xdtdgdsnmfucdhin'; // Use ENV in production!
+        $mail->Username   = 'Test@gmail.com';
+        $mail->Password   = 'xxx.....'; // Use ENV in production!
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
@@ -48,12 +48,12 @@ function sendInvoiceEmail($to, $invoiceUrl, $invoiceNumber, $filePath)
         $mail->CharSet  = 'UTF-8';
         $mail->Encoding = 'base64';
 
-        $mail->setFrom('deepscale.info@gmail.com', 'TemaTech Innovations', false);
-        $mail->Sender = 'tematechinnovatons@gmail.com';
+        $mail->setFrom('Test@gmail.com', 'Test@gmail.com', false);
+        $mail->Sender = 'Test@gmail.com';
 
-        $mail->addReplyTo('tematechinnovatons@gmail.com', 'TemaTech Support');
+        $mail->addReplyTo('Test@gmail.com', 'Test Support');
 
-        $mail->MessageID = '<' . uniqid() . '@tematech.com>';
+        $mail->MessageID = '<' . uniqid() . '@test.com>';
         $mail->XMailer   = 'PHP/' . phpversion();
 
         $mail->Priority = 3;
@@ -70,7 +70,7 @@ function sendInvoiceEmail($to, $invoiceUrl, $invoiceNumber, $filePath)
         $mail->addAddress($to);
 
         // Internal copy (company)
-        $mail->addCC('tematechinnovatons@gmail.com');
+        $mail->addCC('Test@gmail.comm');
 
         // ================================
         // EMAIL CONTENT
@@ -114,11 +114,11 @@ function sendInvoiceEmail($to, $invoiceUrl, $invoiceNumber, $filePath)
                     <p>Your invoice is attached to this email.</p>
 
                     <p>If you have any questions, contact us at 
-                    <strong>tematechinnovatons@gmail.com</strong></p>
+                    <strong>Test@gmail.com</strong></p>
                 </div>
 
                 <div class='footer'>
-                    <p>&copy; " . date('Y') . " TemaTech Innovations</p>
+                    <p>&copy; " . date('Y') . " Test demo</p>
                 </div>
             </div>
         </body>
