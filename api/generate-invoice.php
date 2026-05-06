@@ -129,7 +129,7 @@ function generateInvoice($pdo, $orderReference)
         <div class="header">
             <img src="<?= $logoSrc ?>" class="logo">
             <div class="company">
-                <h2>TemaTech Innovations</h2>
+                <h2>Test demo</h2>
                 <p><strong>Invoice:</strong> <?= $invoiceNumber ?></p>
                 <p><strong>Date:</strong> <?= date('Y-m-d') ?></p>
             </div>
